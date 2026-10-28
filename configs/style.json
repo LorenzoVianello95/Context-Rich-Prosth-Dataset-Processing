@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "family_colors": {"Fox": "#d62728", "OSL": "#2ca02c", "HK": "#1f77b4", "VU": "#ff7f0e"},
+  "family_order": ["Fox", "OSL", "HK", "VU"],
+  "output_formats": ["png", "svg"],
+  "sensor_curve_summary": "mean_only",
+  "cycle_normalized_points": 100,
+  "cycle_axis_label": "gait phase [%]",
+  "family_specific_axes": true,
+  "align_zero_within_sensor_row": true,
+  "note": "Implemented shared family palette, mean-only sensor/current traces, family-specific ranges with aligned zeros. Scientific cycle rules are versioned in common/cycles.py and exported with every shared analysis."
+}

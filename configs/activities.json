@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "categories": [
+    {"key": "1X", "label": "Standing / 1X modes", "color": "#1f77b4"},
+    {"key": "2X", "label": "Overground walking (2X)", "color": "#ff7f0e"},
+    {"key": "3X", "label": "Stair ascent (3X)", "color": "#2ca02c"},
+    {"key": "4X", "label": "Stair descent (4X)", "color": "#d62728"},
+    {"key": "5X", "label": "Ramp ascent (5X)", "color": "#9467bd"},
+    {"key": "6X", "label": "Ramp descent (6X)", "color": "#8c564b"},
+    {"key": "7X", "label": "Passive locomotion (7X)", "color": "#e377c2"},
+    {"key": "8X", "label": "8X (not interpreted)", "color": "#7f7f7f"},
+    {"key": "9X", "label": "9X (not interpreted)", "color": "#bcbd22"},
+    {"key": "unknown", "label": "Unknown label", "color": "#d9d9d9"},
+    {"key": "outside", "label": "Outside 1X-9X", "color": "#262626"}
+  ],
+  "note": "Stable activity colors follow the historical decade palette. Only the grouping changes to decoded-state time occupancy. Do not interpret 8X/9X or infer motor torque from a state label."
+}

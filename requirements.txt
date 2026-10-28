@@ -1,0 +1,5 @@
+# Tested figure-reproduction environment; SciPy supplies monthly trend interpolation.
+# Registry/metadata tables/foundation tests use only the standard library.
+numpy==2.4.6
+scipy==1.16.3
+matplotlib==3.10.7

@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "dataset_schema": "multileg_relative_visit_csv_1.0",
+  "scope": "Public continuous-CSV figure and table reproduction; non-data illustrations and curated hardware/demographic tables excluded by owner.",
+  "figures": [
+    {
+      "id": "dataset_overview",
+      "manuscript_label": "fig:relationships",
+      "title": "Dataset and analysis relationships",
+      "script": "figures/fig_dataset_overview.py",
+      "status": "excluded_by_owner_non_data_image",
+      "renderer_implemented": false,
+      "uses_public_csv": false,
+      "required_inputs": [
+        "Reviewed diagram specification"
+      ],
+      "next_action": "Owner requested leaving this non-data manuscript image unchanged; excluded from reproduction scope.",
+      "legacy_sources": [],
+      "validation": "excluded_by_owner"
+    },
+    {
+      "id": "device_usage_over_time",
+      "manuscript_label": "fig:historyLegs",
+      "title": "Knee and ankle device usage over time",
+      "script": "figures/fig_device_usage_over_time.py",
+      "status": "implemented_aggregate_renderer_review_inputs",
+      "renderer_implemented": true,
+      "uses_public_csv": false,
+      "required_inputs": [
+        "Approved month or quarter device/ankle usage aggregates",
+        "Verified-clock duration policy"
+      ],
+      "next_action": "Separate aggregate inputs are review-only until owner approval. Render locally using --allow-review-only; never require linked dates in this code.",
+      "legacy_sources": [
+        {
+          "script": "explore_multiple_datasets/plot_knee_device_monthly_usage.py",
+          "sha256_at_port": "d4f11f8bb66a0a00270bfb17d8973194d328a803d77df5fb4f977d5defbdd901"
+        }
+      ],
+      "validation": "generated_with_review_only_aggregate_inputs_not_release_approved"
+    },
+    {
+      "id": "subject_timeline",
+      "manuscript_label": "fig:user_to_time_leg",
+      "title": "Participant device-adoption timeline",
+      "script": "figures/fig_subject_timeline.py",
+      "status": "implemented_public_csv",
+      "renderer_implemented": true,
+      "uses_public_csv": true,
+      "required_inputs": [
+        "participant_id",
+        "visit_id",
+        "elapsed_visit_days",
+        "family"
+      ],
+      "next_action": "Run with public metadata and, for sensor traces, the shared analysis. Inspect selection manifest before manuscript use.",
+      "legacy_sources": [
+        {
+          "script": "explore_multiple_datasets/plot_subject_leg_timeline.py",
+          "sha256_at_port": "464f569927f41f20a4411e61115f30b93e7c40af8508bd3affa8edc37e289b61"
+        }
+      ],
+      "validation": "generated_on_full_public_candidate"
+    },
+    {
+      "id": "activity_over_time",
+      "manuscript_label": "fig:montlyActivity",
+      "title": "Activity occupancy and missingness over time",
+      "script": "figures/fig_activity_over_time.py",
+      "status": "implemented_aggregate_renderer_review_inputs",
+      "renderer_implemented": true,
+      "uses_public_csv": false,
+      "required_inputs": [
+        "Approved quarterly activity occupancy and unknown-time aggregates",
+        "Verified-clock denominator"
+      ],
+      "next_action": "Separate aggregate inputs are review-only until owner approval. Render locally using --allow-review-only; never require linked dates in this code.",
+      "legacy_sources": [
+        {
+          "script": "explore_multiple_datasets/plot_sm_event_label_3month_distribution.py",
+          "sha256_at_port": "cc6503405f1076a4d937301dba96e9debc9bad7ca3334a825b1df25bde9f9f24"
+        },
+        {
+          "script": "explore_multiple_datasets/plot_sm_event_label_monthly_distribution.py",
+          "sha256_at_port": "0772cb0f49ed86d00ddbd17f4c9e1328cb03672bbdcac255ef487f53e3acbb11"
+        }
+      ],
+      "validation": "generated_with_review_only_aggregate_inputs_not_release_approved"
+    },
+    {
+      "id": "activity_distribution",
+      "manuscript_label": "fig:pieActivity",
+      "title": "Activity distribution by device family",
+      "script": "figures/fig_activity_distribution.py",
+      "status": "implemented_verified_state_occupancy",
+      "renderer_implemented": true,
+      "uses_public_csv": true,
+      "required_inputs": [
+        "state_labels",
+        "time_s",
+        "sample_index",
+        "Verified source-grid duration",
+        "Public checksums"
+      ],
+      "next_action": "Run on all verified recordings. Default pies include unknown time; native-clock files are audited but not converted to hours.",
+      "legacy_sources": [
+        {
+          "script": "explore_multiple_datasets/plot_sm_event_label_distribution.py",
+          "sha256_at_port": "928d259dec39bf932bdc53f89550c8df0e6021550a50b0936bdaac92de9f069e"
+        }
+      ],
+      "validation": "generated_on_full_public_candidate"
+    },
+    {
+      "id": "document_annotation_example",
+      "manuscript_label": "fig:docai_fig",
+      "title": "Clinical document annotation example",
+      "script": "figures/fig_document_annotation_example.py",
+      "status": "excluded_by_owner_non_data_image",
+      "renderer_implemented": false,
+      "uses_public_csv": false,
+      "required_inputs": [
+        "Approved sanitized or explicitly synthetic example",
+        "Annotation rendering specification"
+      ],
+      "next_action": "Owner requested leaving this non-data manuscript image unchanged; excluded from reproduction scope.",
+      "legacy_sources": [],
+      "validation": "excluded_by_owner"
+    },
+    {
+      "id": "controller_parameters",
+      "manuscript_label": "fig:SM_params_across_activity",
+      "title": "Aligned controller parameters across activities",
+      "script": "figures/fig_controller_parameters.py",
+      "status": "implemented_shared_public_cycle_analysis",
+      "renderer_implemented": true,
+      "uses_public_csv": true,
+      "required_inputs": [
+        "Six controller parameter columns",
+        "state_labels",
+        "Device grouping",
+        "Weighting and correlation definitions"
+      ],
+      "next_action": "Build the shared cycle analysis, then render with --analysis-dir. Validate regenerated values before manuscript use.",
+      "legacy_sources": [
+        {
+          "script": "explore_multiple_datasets/plot_sm_dof_act_phase_means_grid_all_devices.py",
+          "sha256_at_port": "b486ae8b01769846013e109818f54ebe1f6a18d3e80d97e73772d9e9f43de2ba"
+        }
+      ],
+      "validation": "generated_on_full_public_candidate"
+    },
+    {
+      "id": "currents_by_activity",
+      "manuscript_label": "fig:current_all_legs_activities",
+      "title": "Knee and ankle actual current across activities",
+      "script": "figures/fig_currents_by_activity.py",
+      "status": "implemented_shared_public_cycle_analysis",
+      "renderer_implemented": true,
+      "uses_public_csv": true,
+      "required_inputs": [
+        "current_csv_path",
+        "Current columns and masks",
+        "Shared cycle inventory"
+      ],
+      "next_action": "Build the shared cycle analysis, then render with --analysis-dir. Validate regenerated values before manuscript use.",
+      "legacy_sources": [
+        {
+          "script": "explore_multiple_datasets/plot_current_indices_all_sublegs_by_activity.py",
+          "sha256_at_port": "2bbea2031be8dbeaccc768f8329a758436a6fe9fa9f225ebeb8f36adff277be3"
+        },
+        {
+          "script": "explore_multiple_datasets/plot_current_indices_all_legs_by_activity.py",
+          "sha256_at_port": "0ea20e3b2ca32410763cf5ef669db599aa0adff50dfdac747e869070fe191bee"
+        }
+      ],
+      "validation": "generated_on_full_public_candidate"
+    },
+    {
+      "id": "representative_sensor_traces",
+      "manuscript_label": "fig:timedData",
+      "title": "Aligned representative sensor traces",
+      "script": "figures/fig_representative_sensor_traces.py",
+      "status": "implemented_mixed_participant_alternative_validated",
+      "renderer_implemented": true,
+      "uses_public_csv": true,
+      "required_inputs": [
+        "Named sensors and masks",
+        "time_s",
+        "Shared cycle inventory",
+        "Public record selections and alignment shifts"
+      ],
+      "next_action": "No four-family common participant has three consecutive eligible labeled cycles in this release. Explicit --allow-mixed-participants renders a labeled alternative; default refuses to imply same-participant comparison.",
+      "legacy_sources": [
+        {
+          "script": "explore_multiple_datasets/plot_same_subject_daq_2x_attempts.py",
+          "sha256_at_port": "d46ec8bd0d1db6573535a95e5612223c9c241080d928b7be0f8dc23d643ce698"
+        },
+        {
+          "script": "explore_multiple_datasets/plot_representative_2x_cycles_daq_aligned_grid.py",
+          "sha256_at_port": "2ace25fb29dd624c6774e3462cfea1dc674c35288343201e7fd6d67e48fea76d"
+        }
+      ],
+      "validation": "generated_on_full_public_candidate"
+    },
+    {
+      "id": "step_counts",
+      "manuscript_label": "fig:StepCountForLeg",
+      "title": "Activity step-count heatmaps",
+      "script": "figures/fig_step_counts.py",
+      "status": "implemented_shared_public_cycle_analysis",
+      "renderer_implemented": true,
+      "uses_public_csv": true,
+      "required_inputs": [
+        "Shared cycle inventory",
+        "Canonical family/subdevice grouping",
+        "Active/passive walking inclusion policy"
+      ],
+      "next_action": "Build the shared cycle analysis, then render with --analysis-dir. Validate regenerated values before manuscript use.",
+      "legacy_sources": [
+        {
+          "script": "explore_multiple_datasets/plot_gait_phase_stepcount_heatmap_sublegs.py",
+          "sha256_at_port": "be0074b05f5c3d4375bdc7d314c2bad6aa00b0c1fb589837a3ab642e0a332385"
+        },
+        {
+          "script": "explore_multiple_datasets/plot_gait_phase_stepcount_heatmap.py",
+          "sha256_at_port": "b2bab78aa777686e8eb81da32efacb630846905547848255b8a8a46e22439b01"
+        }
+      ],
+      "validation": "generated_on_full_public_candidate"
+    },
+    {
+      "id": "gait_sensor_grid",
+      "manuscript_label": "fig:GaitSensors",
+      "title": "Mean sensor gait-cycle grid",
+      "script": "figures/fig_gait_sensor_grid.py",
+      "status": "implemented_shared_public_cycle_analysis",
+      "renderer_implemented": true,
+      "uses_public_csv": true,
+      "required_inputs": [
+        "Named sensors and masks",
+        "state_labels",
+        "Shared cycle inventory",
+        "Versioned targeted Fz split rules"
+      ],
+      "next_action": "Build the shared cycle analysis, then render with --analysis-dir. Validate regenerated values before manuscript use.",
+      "legacy_sources": [
+        {
+          "script": "explore_multiple_datasets/plot_gait_phase_grid.py",
+          "sha256_at_port": "b51392196e277530bcab1449c3df3103a47d81f8b25f462b74628b1e06814cc1"
+        }
+      ],
+      "validation": "generated_on_full_public_candidate"
+    },
+    {
+      "id": "sensor_amplitude",
+      "manuscript_label": "fig:amplitudeAndMean",
+      "title": "Sensor amplitude and mean by device",
+      "script": "figures/fig_sensor_amplitude.py",
+      "status": "implemented_shared_public_cycle_analysis",
+      "renderer_implemented": true,
+      "uses_public_csv": true,
+      "required_inputs": [
+        "Same walking cycle inventory as gait grid",
+        "Named sensors and masks",
+        "Defined range/mean summary statistics"
+      ],
+      "next_action": "Build the shared cycle analysis, then render with --analysis-dir. Validate regenerated values before manuscript use.",
+      "legacy_sources": [
+        {
+          "script": "explore_multiple_datasets/analyze_sensor_amplitude_by_device.py",
+          "sha256_at_port": "47e4969e8cac5b0a0a812052cef3ae482270c682b845d702fb535a101a1307c3"
+        }
+      ],
+      "validation": "generated_on_full_public_candidate"
+    }
+  ]
+}

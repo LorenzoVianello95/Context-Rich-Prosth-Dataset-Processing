@@ -1,0 +1,116 @@
+{
+  "dataset_overview": {
+    "legacy_sources": [],
+    "scope": "Excluded non-data image by owner"
+  },
+  "device_usage_over_time": {
+    "legacy_sources": [
+      {
+        "script": "explore_multiple_datasets/plot_knee_device_monthly_usage.py",
+        "sha256_at_port": "d4f11f8bb66a0a00270bfb17d8973194d328a803d77df5fb4f977d5defbdd901"
+      }
+    ],
+    "scope": "Adapted source algorithms/layout; public named-column inputs, masks and current signs are authoritative. No runtime dependency on exploration scripts."
+  },
+  "subject_timeline": {
+    "legacy_sources": [
+      {
+        "script": "explore_multiple_datasets/plot_subject_leg_timeline.py",
+        "sha256_at_port": "464f569927f41f20a4411e61115f30b93e7c40af8508bd3affa8edc37e289b61"
+      }
+    ],
+    "scope": "Adapted source algorithms/layout; public named-column inputs, masks and current signs are authoritative. No runtime dependency on exploration scripts."
+  },
+  "activity_over_time": {
+    "legacy_sources": [
+      {
+        "script": "explore_multiple_datasets/plot_sm_event_label_3month_distribution.py",
+        "sha256_at_port": "cc6503405f1076a4d937301dba96e9debc9bad7ca3334a825b1df25bde9f9f24"
+      },
+      {
+        "script": "explore_multiple_datasets/plot_sm_event_label_monthly_distribution.py",
+        "sha256_at_port": "0772cb0f49ed86d00ddbd17f4c9e1328cb03672bbdcac255ef487f53e3acbb11"
+      }
+    ],
+    "scope": "Adapted source algorithms/layout; public named-column inputs, masks and current signs are authoritative. No runtime dependency on exploration scripts."
+  },
+  "activity_distribution": {
+    "legacy_sources": [
+      {
+        "script": "explore_multiple_datasets/plot_sm_event_label_distribution.py",
+        "sha256_at_port": "928d259dec39bf932bdc53f89550c8df0e6021550a50b0936bdaac92de9f069e"
+      }
+    ],
+    "scope": "Ported pie layout/palette; recomputed decoded-state occupancy from released CSV, not legacy sparse-event counts."
+  },
+  "document_annotation_example": {
+    "legacy_sources": [],
+    "scope": "Excluded non-data image by owner"
+  },
+  "controller_parameters": {
+    "legacy_sources": [
+      {
+        "script": "explore_multiple_datasets/plot_sm_dof_act_phase_means_grid_all_devices.py",
+        "sha256_at_port": "b486ae8b01769846013e109818f54ebe1f6a18d3e80d97e73772d9e9f43de2ba"
+      }
+    ],
+    "scope": "Adapted source algorithms/layout; public named-column inputs, masks and current signs are authoritative. No runtime dependency on exploration scripts."
+  },
+  "currents_by_activity": {
+    "legacy_sources": [
+      {
+        "script": "explore_multiple_datasets/plot_current_indices_all_sublegs_by_activity.py",
+        "sha256_at_port": "2bbea2031be8dbeaccc768f8329a758436a6fe9fa9f225ebeb8f36adff277be3"
+      },
+      {
+        "script": "explore_multiple_datasets/plot_current_indices_all_legs_by_activity.py",
+        "sha256_at_port": "0ea20e3b2ca32410763cf5ef669db599aa0adff50dfdac747e869070fe191bee"
+      }
+    ],
+    "scope": "Adapted source algorithms/layout; public named-column inputs, masks and current signs are authoritative. No runtime dependency on exploration scripts."
+  },
+  "representative_sensor_traces": {
+    "legacy_sources": [
+      {
+        "script": "explore_multiple_datasets/plot_same_subject_daq_2x_attempts.py",
+        "sha256_at_port": "d46ec8bd0d1db6573535a95e5612223c9c241080d928b7be0f8dc23d643ce698"
+      },
+      {
+        "script": "explore_multiple_datasets/plot_representative_2x_cycles_daq_aligned_grid.py",
+        "sha256_at_port": "2ace25fb29dd624c6774e3462cfea1dc674c35288343201e7fd6d67e48fea76d"
+      }
+    ],
+    "scope": "Adapted source algorithms/layout; public named-column inputs, masks and current signs are authoritative. No runtime dependency on exploration scripts."
+  },
+  "step_counts": {
+    "legacy_sources": [
+      {
+        "script": "explore_multiple_datasets/plot_gait_phase_stepcount_heatmap_sublegs.py",
+        "sha256_at_port": "be0074b05f5c3d4375bdc7d314c2bad6aa00b0c1fb589837a3ab642e0a332385"
+      },
+      {
+        "script": "explore_multiple_datasets/plot_gait_phase_stepcount_heatmap.py",
+        "sha256_at_port": "b2bab78aa777686e8eb81da32efacb630846905547848255b8a8a46e22439b01"
+      }
+    ],
+    "scope": "Adapted source algorithms/layout; public named-column inputs, masks and current signs are authoritative. No runtime dependency on exploration scripts."
+  },
+  "gait_sensor_grid": {
+    "legacy_sources": [
+      {
+        "script": "explore_multiple_datasets/plot_gait_phase_grid.py",
+        "sha256_at_port": "b51392196e277530bcab1449c3df3103a47d81f8b25f462b74628b1e06814cc1"
+      }
+    ],
+    "scope": "Adapted source algorithms/layout; public named-column inputs, masks and current signs are authoritative. No runtime dependency on exploration scripts."
+  },
+  "sensor_amplitude": {
+    "legacy_sources": [
+      {
+        "script": "explore_multiple_datasets/analyze_sensor_amplitude_by_device.py",
+        "sha256_at_port": "47e4969e8cac5b0a0a812052cef3ae482270c682b845d702fb535a101a1307c3"
+      }
+    ],
+    "scope": "Adapted source algorithms/layout; public named-column inputs, masks and current signs are authoritative. No runtime dependency on exploration scripts."
+  }
+}

@@ -1,0 +1,1 @@
+"""Public-metadata table reproduction."""
